@@ -196,8 +196,8 @@ configure(subprojects) { p ->
 	}
 
 	if (JavaVersion.current().isJava9Compatible()) {
-	  println "Java 9+: lowering MaxGCPauseMillis to 20ms in ${project.name} ${name}"
-	  jvmArgs = ["-XX:MaxGCPauseMillis=20"]
+	  println "Java 9+: lowering MaxGCPauseMillis to 9s in ${project.name} ${name}"
+	  jvmArgs = ["-XX:MaxGCPauseMillis=9000"]
 	}
 
 	systemProperty("java.awt.headless", "true")
